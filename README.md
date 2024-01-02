@@ -25,10 +25,14 @@
 [vega@fedora ~]$ vagrant --version
 Vagrant 2.2.19
 
-
+[vega@fedora ~]$ terraform --version
+Terraform v1.6.6-dev
 
 [vega@fedora ~]$ ansible --version
 ansible [core 2.14.11]
 
 4 задача
 
+[vega@fedora boxes]$ vagrant box list
+bento/ubuntu-20.04 (virtualbox, 0)
+[vega@fedora boxes]$ 
