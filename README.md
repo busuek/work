@@ -66,3 +66,27 @@ ansible [core 2.14.11]
 Последним стоит поставить еще один физический сервер, для бэкапа, всегда стоит выделять под это именно физический отдельный сервер, так как крах на любом другом сервере понесет и потерю всех данных на бэкапе, это просто глупо.
 
 3 задача
+
+Листинг комманд по заданию:
+
+[vega@fedora ~]$ sudo docker pull centos # Скачиваем docker образы 
+[vega@fedora ~]$ sudo docker pull debian
+
+[vega@fedora ~]$ mkdir data # Создаем директорию по заданию
+[vega@fedora ~]$ sudo docker run -it -v "$(pwd)/data":/data:Z centos bash # Создаем и запускаем контейнеры с образами дистрибутивов в фоне. Так же, подключаем
+[vega@fedora ~]$ sudo docker run -it -v "$(pwd)/data":/data:Z debian bash # к ним созданную локально директорию data
+
+[root@b9be457bbea8 ~]# cd data               # Подключаемся к первой машине и создаем текстовый файл в директории data
+[root@b9be457bbea8 data]# touch file1.txt
+
+[vega@fedora data]$ sudo nano file2.txt      # Подключаемся к хостовой машине и создаем второй текстовый файл в директории data
+
+root@ae4e0bec45fd:/# cd data                 # Подключаемся ко второй машине и смотрим листинг двух файлов
+root@ae4e0bec45fd:/data# ls
+file1.txt  file2.txt
+root@ae4e0bec45fd:/data# cat file1.txt file2.txt
+Это первый файл, созданный в певом контейнере.
+Это второй файл, созданный на хостовой машине.
+root@ae4e0bec45fd:/data# 
+
+# netology 4
