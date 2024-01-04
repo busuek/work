@@ -19,16 +19,16 @@
 
 3 задача
 ```
-[vega@fedora ~]$ vboxmanage --version
+[user@fedora ~]$ vboxmanage --version
 7.0.12r159484
 
-[vega@fedora ~]$ vagrant --version
+[user@fedora ~]$ vagrant --version
 Vagrant 2.2.19
 
-[vega@fedora ~]$ terraform --version
+[user@fedora ~]$ terraform --version
 Terraform v1.6.6-dev
 
-[vega@fedora ~]$ ansible --version
+[user@fedora ~]$ ansible --version
 ansible [core 2.14.11]
 ```
 # netology 3
@@ -65,17 +65,17 @@ ansible [core 2.14.11]
 
 Листинг комманд по заданию:
 ```
-[vega@fedora ~]$ sudo docker pull centos # Скачиваем docker образы 
-[vega@fedora ~]$ sudo docker pull debian
+[user@fedora ~]$ sudo docker pull centos # Скачиваем docker образы 
+[user@fedora ~]$ sudo docker pull debian
 
-[vega@fedora ~]$ mkdir data # Создаем директорию по заданию
-[vega@fedora ~]$ sudo docker run -it -v "$(pwd)/data":/data:Z centos bash # Создаем и запускаем контейнеры с образами дистрибутивов в фоне. Так же, подключаем
-[vega@fedora ~]$ sudo docker run -it -v "$(pwd)/data":/data:Z debian bash # к ним созданную локально директорию data
+[user@fedora ~]$ mkdir data # Создаем директорию по заданию
+[user@fedora ~]$ sudo docker run -it -v "$(pwd)/data":/data:Z centos bash # Создаем и запускаем контейнеры с образами дистрибутивов в фоне. Так же, подключаем
+[user@fedora ~]$ sudo docker run -it -v "$(pwd)/data":/data:Z debian bash # к ним созданную локально директорию data
 
 [root@b9be457bbea8 ~]# cd data               # Подключаемся к первой машине и создаем текстовый файл в директории data
 [root@b9be457bbea8 data]# touch file1.txt
 
-[vega@fedora data]$ sudo nano file2.txt      # Подключаемся к хостовой машине и создаем второй текстовый файл в директории data
+[user@fedora data]$ sudo nano file2.txt      # Подключаемся к хостовой машине и создаем второй текстовый файл в директории data
 
 root@ae4e0bec45fd:/# cd data                 # Подключаемся ко второй машине и смотрим листинг двух файлов
 root@ae4e0bec45fd:/data# ls
@@ -85,7 +85,3 @@ root@ae4e0bec45fd:/data# cat file1.txt file2.txt
 Это второй файл, созданный на хостовой машине.
 root@ae4e0bec45fd:/data# 
 ```
-# netology 4
-
-1 задача
-
