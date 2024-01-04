@@ -31,10 +31,6 @@ Terraform v1.6.6-dev
 [vega@fedora ~]$ ansible --version
 ansible [core 2.14.11]
 ```
-4 задача
-
-
-
 # netology 3
 
 1 задача
