@@ -31,6 +31,15 @@ Terraform v1.6.6-dev
 [user@fedora ~]$ ansible --version
 ansible [core 2.14.11]
 ```
+4 
+user@ubuntu:~$ su
+Password: 
+root@ubuntu:/home/user# docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+root@ubuntu:/home/user# uname -a 
+Linux ubuntu 6.2.0-39-generic #40~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Nov 16 10:53:04 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+
 # netology 3
 
 1 задача
