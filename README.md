@@ -31,13 +31,22 @@ Terraform v1.6.6-dev
 [user@fedora ~]$ ansible --version
 ansible [core 2.14.11]
 ```
-4 
-user@ubuntu:~$ su
-Password: 
-root@ubuntu:/home/user# docker ps
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+4 задача
+
+На виртуальной машине переходим в режим root
 root@ubuntu:/home/user# uname -a 
 Linux ubuntu 6.2.0-39-generic #40~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Nov 16 10:53:04 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+user@ubuntu:~$ su
+Password: 
+
+Проверяем наличие установленного docker
+
+root@ubuntu: docker -v
+Docker version 24.0.5, build %{shortcommit_cli}
+
+root@ubuntu:/home/user# docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
 
 # netology 3
