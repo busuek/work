@@ -126,4 +126,7 @@ endpoint = "unix:///var/run/docker.sock"
 
 Решение:
 
+>После настройки перезапустите telegraf, обновите веб интерфейс и приведите скриншотом список measurments в веб-интерфейсе базы telegraf.autogen . Там должны появиться метрики, связанные с docker.
+
+![image](https://github.com/busuek/work/assets/101875725/6861fe23-4fb0-4d2b-a622-0c85a8ca27a9)
 
