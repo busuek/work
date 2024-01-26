@@ -80,9 +80,13 @@
 Решение
 
 >Prometheus - гибрид
+>
 >TICK - push
+>
 >Zabbix - гибрид
+>
 >VictoriaMetrics - push
+>
 >Nagios - pull
 
 Задание 7. Склонируйте себе репозиторий и запустите TICK-стэк, используя технологии docker и docker-compose.
