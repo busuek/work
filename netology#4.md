@@ -18,3 +18,6 @@
 
 ![10-monitoring-04-elk-indexes](https://github.com/busuek/work/assets/101875725/01300dec-4704-46e7-9bf3-f1119f315884)
 
+![10-monitoring-04-elk-logstash](https://github.com/busuek/work/assets/101875725/1e0b0f3d-7b54-4bfb-bb2f-616e3b05786f)
+
+![10-monitoring-04-elk-logstash1](https://github.com/busuek/work/assets/101875725/b57e3de1-c951-4040-8284-7eb7e9b0871a)
