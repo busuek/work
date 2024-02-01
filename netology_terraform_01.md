@@ -5,6 +5,10 @@
 Решение:
 
 ```
+admin@virtual:~$ terraform --version 
+Terraform v1.5.5
+on linux_amd64
+
 admin@virtual:~/netology/ter-homeworks/01/src$ terraform init
 
 Initializing the backend...
