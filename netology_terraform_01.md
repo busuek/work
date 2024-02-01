@@ -94,3 +94,53 @@ admin@virtual:~/netology/ter-homeworks/01/src$ terraform validate
 
 5. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды `docker ps`.
 
+```
+admin@virtual:~/netology/ter-homeworks/01/src$ terraform apply   
+random_password.random_string: Refreshing state... [id=none]
+...
+docker_image.nginx: Creating...
+docker_image.nginx: Still creating... [10s elapsed]
+docker_image.nginx: Still creating... [20s elapsed]
+docker_image.nginx: Still creating... [30s elapsed]
+docker_image.nginx: Creation complete after 35s [id=sha256:f9c14fe76d502861ba0939bc3189e642c02e257f06f4c0214b1f8ca329326cdanginx:latest]
+docker_container.nginx: Creating...
+docker_container.nginx: Creation complete after 3s [id=e708e7761e6523c9f28885779cd88a5a96013d83cbf9be54a6a5ea1ba68cb1bf]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+```
+
+```
+admin@virtual:~/netology/ter-homeworks/01/src$ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED              STATUS              PORTS                  NAMES
+e708e7761e65   f9c14fe76d50   "/docker-entrypoint.…"   About a minute ago   Up About a minute   0.0.0.0:8000->80/tcp   example_Lt8k2UlNUCKm86kk
+```
+
+6. Замените имя docker-контейнера в блоке кода на `hello_world`, выполните команду `terraform apply -auto-approve`. Объясните своими словами, в чем может быть опасность применения ключа `-auto-approve`? В качестве ответа дополнительно приложите вывод команды `docker ps`.
+
+```
+admin@virtual:~/netology/ter-homeworks/01/src$ docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                  NAMES
+f06026f825dd   f9c14fe76d50   "/docker-entrypoint.…"   3 minutes ago   Up 3 minutes   0.0.0.0:8000->80/tcp   hello_world
+```
+-auto-approve: Пропускает интерактивное одобрение плана развертывания.
+
+7. Уничтожьте созданные ресурсы с помощью terraform. Убедитесь, что все ресурсы удалены. Приложите содержимое файла terraform.tfstate.
+
+```
+{
+  "version": 4,
+  "terraform_version": "1.4.6",
+  "serial": 11,
+  "lineage": "191fa340-83b0-0273-4092-27b00d35a76c",
+  "outputs": {},
+  "resources": [],
+  "check_results": null
+}
+```
+
+8. Объясните, почему при этом не был удален docker образ nginx:latest ? Ответ подкрепите выдержкой из документации провайдера.
+В main.tf присутвует параметр keep_locally = true Согласно документации провайдера, если стои true то он не будет удален.
+
+```
+keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
+```
