@@ -16,3 +16,4 @@
 
 Исправленный блок ресурса выглядит следующим образом:
 
+![Screenshot from 2024-02-05 15-24-54](https://github.com/busuek/work/assets/101875725/c7efbfe4-4994-4edb-95c9-3a2c2b2b89b7)
