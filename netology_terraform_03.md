@@ -51,8 +51,9 @@ Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 
 Скриншоты:  
 
--
--
+![new_terraform-03-2-vm-list](https://github.com/busuek/work/assets/101875725/8c5aa6bf-785d-4554-b4c3-413536bcb0a2)
+
+![image](https://github.com/busuek/work/assets/101875725/96e76613-7dac-4289-a7f9-69b29f57c804)
 
 <details>
 <summary>Вывод консоли</summary>
