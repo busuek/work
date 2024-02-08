@@ -230,8 +230,9 @@ Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 
 Скриншоты:  
 
-- 
--
+![1](https://github.com/busuek/work/assets/101875725/4a55546a-aaa5-47da-a9cb-ca8c904f2a4b)
+
+![2](https://github.com/busuek/work/assets/101875725/95d8f314-c64a-4679-83ad-f6485124cdb4)
 
 <details>
 <summary>Вывод консоли</summary>
@@ -470,7 +471,7 @@ storage   ansible_host=51.250.95.252
 
 Скриншот:
 
--
+![3](https://github.com/busuek/work/assets/101875725/6e7b23cb-91d1-433f-8678-90e35983c139)
 
 Файлы:
 
