@@ -2,13 +2,13 @@
 
 Приложите скриншот входящих правил "Группы безопасности" в ЛК Yandex Cloud.
 
-![](pic/terraform-03-security-groups.png)  
+![image](https://github.com/busuek/work/assets/101875725/e6dd2cff-422d-4553-b152-6a37860ca693)
 
 <details>
 <summary>Вывод консоли</summary>
 
 ``` sh
-PS D:\projects\devops-netology\assets\terraform-03-control-structures\src> terraform apply 
+user@ubuntu: ~/Desktop/projects/devops-netology/assets/terraform-03-control-structures/src$ terraform apply 
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   + create
