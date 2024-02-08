@@ -8,7 +8,7 @@
 <summary>Вывод консоли</summary>
 
 ``` sh
-user@ubuntu: ~/Desktop/projects/devops-netology/assets/terraform-03-control-structures/src$ terraform apply 
+admin@virtual: ~/Desktop/projects/devops-netology/assets/terraform-03-control-structures/src$ terraform apply 
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   + create
@@ -35,3 +35,11 @@ Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 </details>
 
 ------
+
+### Задание 2
+
+1. Создайте файл count-vm.tf. Опишите в нем создание двух **одинаковых** ВМ  web-1 и web-2(не web-0 и web-1!), с минимальными параметрами, используя мета-аргумент **count loop**. Назначьте ВМ созданную в 1-м задании группу безопасности.
+2. Создайте файл for_each-vm.tf. Опишите в нем создание 2 ВМ с именами "main" и "replica" **разных** по cpu/ram/disk , используя мета-аргумент **for_each loop**. Используйте переменную типа list(object({ vm_name=string, cpu=number, ram=number, disk=number  })). При желании внесите в переменную все возможные параметры.
+3. ВМ из пункта 2.2 должны создаваться после создания ВМ из пункта 2.1.
+4. Используйте функцию file в local переменной для считывания ключа ~/.ssh/id_rsa.pub и его последующего использования в блоке metadata, взятому из ДЗ №2.
+5. Инициализируйте проект, выполните код.
