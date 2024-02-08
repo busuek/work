@@ -475,9 +475,9 @@ storage   ansible_host=51.250.95.252
 
 Файлы:
 
--
--
--
+- [ansible.tf](https://github.com/busuek/work/blob/main/ansible.tf)  
+- [hosts.tftpl](https://github.com/busuek/work/blob/main/hosts.tftpl)  
+- [hosts.cfg](https://github.com/busuek/work/blob/main/hosts.cfg)  
 
 <details>
 <summary>Вывод консоли</summary>
