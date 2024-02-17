@@ -39,11 +39,11 @@
 
 Заменил хардкод-значения для ресурсов yandex_compute_image и yandex_compute_instance с добавлением префикса vm_web_
 
-![image](https://github.com/busuek/work/assets/101875725/13768136-d384-4616-a1c9-def0dd7c6cfb)
+![Screenshot from 2024-02-17 16-38-37](https://github.com/busuek/work/assets/101875725/b1d76e18-174b-4846-9ea3-7acc425a8338)
 
 Объявил переменные в файле variables.tf:
 
-![image](https://github.com/busuek/work/assets/101875725/0fcbf86a-0909-4003-bc20-deb76e827717)
+![Screenshot from 2024-02-17 16-43-24](https://github.com/busuek/work/assets/101875725/5b0aca96-e055-475b-b444-d43ec1c14811)
 
 Выполнил terraform plan, появилось сообщение о том, что terraform не нашел отличий от действующей инфраструктуры:
 
@@ -53,13 +53,13 @@
 
 Создал в корне проекта файл 'vms_platform.tf'. Перенес в него все переменные первой ВМ:
 
-![image](https://github.com/busuek/work/assets/101875725/e16f192c-56d5-4783-abb1-94524937838a)
+![Screenshot from 2024-02-17 16-45-35](https://github.com/busuek/work/assets/101875725/03f971a9-91c4-42bb-9bf5-da10d52e143d)
 
 В блоке ресурса создал вторую ВМ с указанными параметрами и объявил её переменные с префиксом vm_db_ в файле vms_platform.tf:
 
-![image](https://github.com/busuek/work/assets/101875725/521b621c-8171-439d-966f-e9f8b25cd9af)
+![Screenshot from 2024-02-17 17-06-11](https://github.com/busuek/work/assets/101875725/776af243-0a4b-40bf-95bf-7d6de76dba54)
 
-![image](https://github.com/busuek/work/assets/101875725/b9d36683-49cb-4d44-8ac7-57e2ade95c67)
+![Screenshot from 2024-02-17 16-49-36](https://github.com/busuek/work/assets/101875725/8f2546b0-3bcc-4b98-89ee-829e9626b4f5)
 
 Применяю конфигурацию, вносится изменение в текущую инфраструктуру, создается еще одна виртуальная машина:
 
@@ -71,11 +71,11 @@
 
 Объявил в outputs.tf output типа map, получился следующий output:
 
-![image](https://github.com/busuek/work/assets/101875725/cccd8cd0-bfa0-4859-8edc-fca496a37ee2)
+![Screenshot from 2024-02-17 16-55-02](https://github.com/busuek/work/assets/101875725/ec876c69-c5a0-4fdd-95dd-4388c3c92f4e)
 
 Применил изменения, terraform output показал следующее:
 
-![image](https://github.com/busuek/work/assets/101875725/c073faf0-734c-4256-b28e-385ee9192476)
+![Screenshot from 2024-02-17 16-58-59](https://github.com/busuek/work/assets/101875725/7d4b4e87-d253-467f-a204-86fd735b9d4d)
 
 Задание 5 
 
