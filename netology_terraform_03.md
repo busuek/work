@@ -53,6 +53,9 @@ Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 
 ![new_terraform-03-2-vm-list](https://github.com/busuek/work/assets/101875725/8c5aa6bf-785d-4554-b4c3-413536bcb0a2)
 
+Назначил виртуальной машине созданную в первом задании группу безопасности:
+![Screenshot from 2024-02-26 11-50-47](https://github.com/busuek/work/assets/101875725/a0ca7142-d546-498b-928f-7b3757bf82e9)
+
 ![image](https://github.com/busuek/work/assets/101875725/96e76613-7dac-4289-a7f9-69b29f57c804)
 
 <details>
