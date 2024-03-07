@@ -14,7 +14,7 @@ ansible [core 2.12.7]
 
 2. Создан публичный репозиторий Github.
 ```
-   $ git clone https://github.com/busuek/Ansible-project.git
+   $ git clone https://github.com/busuek/work.git
 ```
 
 3. Playbook из задания добавлен в отдельный репозиторий.
@@ -26,7 +26,7 @@ Delta compression using up to 4 threads
 Compressing objects: 100% (8/8), done.
 Writing objects: 100% (15/15), 1.61 KiB | 137.00 KiB/s, done.
 Total 15 (delta 0), reused 0 (delta 0)
-To github.com:busuek/Ansible-project.git
+To github.com:busuek/work.git
  * [new branch]      master -> master
 Branch 'master' set up to track remote branch 'master' from 'ssh-origin'.
 ```
