@@ -6,7 +6,30 @@
 3. Скачайте [playbook](./playbook/) из репозитория с домашним заданием и перенесите его в свой репозиторий.
 
 ### Решение:
+1. Установленная в системе версия ansible 2.12.7.
+```
+    $ ansible --version | head -1
+ansible [core 2.12.7]
+```
 
+2. Создан публичный репозиторий Github.
+```
+   $ git clone https://github.com/busuek/Ansible-project.git
+```
+
+3. Playbook из задания добавлен в отдельный репозиторий.
+```
+     git push -u ssh-origin
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (15/15), 1.61 KiB | 137.00 KiB/s, done.
+Total 15 (delta 0), reused 0 (delta 0)
+To github.com:busuek/Ansible-project.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'ssh-origin'.
+```
 ## Основная часть
 1. Попробуйте запустить playbook на окружении из `test.yml`, зафиксируйте какое значение имеет факт `some_fact` для указанного хоста при выполнении playbook'a.
 2. Найдите файл с переменными (group_vars) в котором задаётся найденное в первом пункте значение и поменяйте его на 'all default fact'.
