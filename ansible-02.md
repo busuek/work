@@ -57,4 +57,4 @@ clickhous-01                  : ok=3    changed=0    unreachable=0    faild=0   
 vector-01                     : ok=6    changed=1    unreachable=0    faild=0    skipped=0    rescued=0    ignored=0
 ```
 
-9.  Ссылка на описание Playbook: 
+9.  Ссылка на описание Playbook: https://github.com/busuek/work/blob/main/README.md
