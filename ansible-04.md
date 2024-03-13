@@ -33,8 +33,14 @@
 ## Решение:
 
 1. В в старой версии playbook создал файл requirements.yml с указанным содержимым:
-
-![img_1.png](img/task1.png)
+```
+  GNU nano 7.2                                               requirements.yml                                                         
+---
+  - src: git@github.com:AlexeySetevoi/ansible-clickhouse.git
+    scm: git
+    version: "1.13"
+    name: clickhouse
+```
 
 2. Скачал роль с помощью `ansible-galaxy`, появилась директория `roles` с субдиректорией `clickhouse`, в которой находится playbook для установки роли clickhouse.
 
