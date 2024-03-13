@@ -56,9 +56,9 @@
 
 8. Выложил роли в репозитории. Ссылки на репозитории ролей:
 
-https://github.com/Elfxf85/devops-netology/blob/main/vector-role
+https://github.com/busuek/vector-role
 
-https://github.com/Elfxf85/devops-netology/blob/main/lighthouse-role
+https://github.com/busuek/lighthouse-role
 
 9. Изменил playbook на использование roles.
 
