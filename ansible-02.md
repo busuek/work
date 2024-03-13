@@ -57,7 +57,7 @@ vector:
     - name: Flush handlers to restart vector
       ansible.builtin.meta: flush_handlers
 ```
-Так же, создал [template](), с конфигурацией для деплоя vector. Playbook использует модули `get_url`, `template`, `unarchive`, `file` и `shell`. В Playbook выполняется скачивание, разархивирование в указанную директорию, добавление конфигурации из файла шаблона и запуск Vector.
+Так же, создал [template](https://github.com/busuek/work/blob/main/vector.toml.j2), с конфигурацией для деплоя vector. Playbook использует модули `get_url`, `template`, `unarchive`, `file` и `shell`. В Playbook выполняется скачивание, разархивирование в указанную директорию, добавление конфигурации из файла шаблона и запуск Vector.
 
 5. Запустил `ansible-lint site.yml`, увидел наличие ошибок.
 ```
