@@ -62,4 +62,4 @@ https://github.com/busuek/lighthouse-role
 
 9. Изменил playbook на использование roles.
 
-10. Выложил playbook в репозиторий. Ссылка на playbook: https://github.com/Elfxf85/devops-netology/blob/main/7.4ansible/src
+10. Выложил playbook в репозиторий. Ссылка на playbook: https://github.com/busuek/work/tree/main/playbook-ansible
