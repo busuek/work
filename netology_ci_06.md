@@ -7,9 +7,8 @@
 3. Создайте новый репозиторий в GitLab, наполните его файлами.
 4. Проект должен быть публичным, остальные настройки по желанию.
 
-### Результаты подготовки
-* Создан новый проект [netology-example](https://gitlab.com/evgeni-listopad/netology-example) и наполнен необходимыми файлами:
-![Gitlab_prep](./TASK_9.6/Gitlab_prep.PNG)
+### Подготовительный этап:
+Создал проект [netology-example](https://github.com/busuek/work/blob/main/1.png)
 
 ## Основная часть
 
