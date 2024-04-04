@@ -113,13 +113,3 @@ CMD ["python3", "python-api.py"]
 ![Result](https://github.com/busuek/work/blob/main/12.png)
 * Закрываем Issue с комментарием об успешности прохождения:
 ![Result_OK](https://github.com/busuek/work/blob/main/13.png)
-
-### ИТОГ
-* Проект [netology-example](https://gitlab.com/evgeni-listopad/netology-example) в Gitlab
-* Файл [gitlab-ci.yml](./TASK_9.6/gitlab-ci.yml)
-* [Dockerfile](./TASK_9.6/Dockerfile)
-* Логи успешного выполнения пайплайнов: 
-[Лог1](https://gitlab.com/evgeni-listopad/netology-example/-/jobs/4044690575),
-[Лог2](https://gitlab.com/evgeni-listopad/netology-example/-/jobs/4046812987),
-[Лог3](https://gitlab.com/evgeni-listopad/netology-example/-/jobs/4046823552);
-* Решённый [Issue](https://gitlab.com/evgeni-listopad/netology-example/-/issues/1)
