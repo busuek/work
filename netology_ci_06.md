@@ -80,35 +80,35 @@ CMD ["python3", "python-api.py"]
 * Для обеспечения процесса сборки необходима установка и настройка внешенего `runner'a` CI/CD. Выполним его развертывание на базе Yandex cloud:
 ![Runner](https://github.com/busuek/work/blob/main/3.png)
 * После настройки `Runner` CI/CD появился в Gitlab:
-![Runner_OK]((https://github.com/busuek/work/blob/main/4.png))
+![Runner_OK](https://github.com/busuek/work/blob/main/4.png)
 * Для обеспечения корректной работы `runner'a` в настройках Gitlab пропишем значения требуемых переменных среды:
-![Variables]((https://github.com/busuek/work/blob/main/5.png))
+![Variables](https://github.com/busuek/work/blob/main/5.png)
 * Выполним коммит файлов для репозитория и убедимся в автоматическом запуске CI/CD. Результаты работы CI/CD:
-![CICD_OK]((https://github.com/busuek/work/blob/main/6.png))
+![CICD_OK](https://github.com/busuek/work/blob/main/6.png)
 * Убедимся, что в собранный Docker-образ загрузился в Gitlab Container Registry:
-![Image]((https://github.com/busuek/work/blob/main/7.png))
+![Image](https://github.com/busuek/work/blob/main/7.png)
 * На основе собранного образа попробуем поднять pod kubernetes. Хотя тема использования kubernetes рассматривается намного позже в курсе. 
 Будем использовать ту же VM в Yandex cloud:
-![Kubectl]((https://github.com/busuek/work/blob/main/8.png))
+![Kubectl](https://github.com/busuek/work/blob/main/8.png)
 
 ### Результаты выполнения основной части Product Owner
 * Создан новый объект Issue с именем `Изменить message` с описанием `Текст с { "message": "Already started" } изменить на { "message": "Running"}` и label `feature`:
-![Issue]((https://github.com/busuek/work/blob/main/9.png))
+![Issue](https://github.com/busuek/work/blob/main/9.png)
 
 ### Результаты выполнения основной части Developer
 * Создадим отдельную ветку с именем `1-message` и `merge request`
 * Отредактируем файл python-api.py изменив значение `message`
 * Сохраним изменения в ветке `1-message`
 * Переходим в Gitlab на вкладку `Merge request`. Отмечаем request `Mark as ready`. Дожидаемся, чтобы pipeline CI/CD отработал:
-![Resolve]((https://github.com/busuek/work/blob/main/10.png))
+![Resolve](https://github.com/busuek/work/blob/main/10.png)
 * Выполняем merge в корневую ветку. Дожидаемся, чтобы pipeline CI/CD отработал:
-![Resolve_OK]((https://github.com/busuek/work/blob/main/11.png))
+![Resolve_OK](https://github.com/busuek/work/blob/main/11.png)
 
 ### Результаты выполнения основной части Tester
 * Поднимем докер-контейнер с образом и проверим возврат метода на корректность.
-![Result]((https://github.com/busuek/work/blob/main/12.png))
+![Result](https://github.com/busuek/work/blob/main/12.png)
 * Закрываем Issue с комментарием об успешности прохождения:
-![Result_OK]((https://github.com/busuek/work/blob/main/13.png))
+![Result_OK](https://github.com/busuek/work/blob/main/13.png)
 
 ### ИТОГ
 * Проект [netology-example](https://gitlab.com/evgeni-listopad/netology-example) в Gitlab
