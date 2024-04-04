@@ -1,0 +1,48 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_HOST: tcp://localhost:2375/
+  image: cr.yandex/yc/metadata-token-docker-helper:0.2
+  services:
+    - docker:19.03.1-dind
+  script:
+    - docker build -t cr.yandex/crp8fevcbvsq4urv3k56/python-api:$CI_COMMIT_SHORT_SHA -t cr.yandex/crp8fevcbvsq4urv3k56/python-api:latest .
+    - docker push cr.yandex/crp8fevcbvsq4urv3k56/python-api:$CI_COMMIT_SHORT_SHA
+    - docker push cr.yandex/crp8fevcbvsq4urv3k56/python-api:latest
+
+test:
+  stage: test
+  variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_HOST: tcp://localhost:2375/
+  image: cr.yandex/yc/metadata-token-docker-helper:0.2
+  services:
+    - docker:19.03.1-dind
+  script:
+    - docker pull cr.yandex/crp8fevcbvsq4urv3k56/python-api:latest
+    - docker run -p 5290:5290 -d cr.yandex/crp8fevcbvsq4urv3k56/python-api:latest
+    - curl localhost:5290/get_info
+  when: manual
+  needs:
+    - build
+
+deploy:
+  image: gcr.io/cloud-builders/kubectl:latest
+  stage: deploy
+  script:
+    - kubectl config set-cluster k8s --server="$KUBE_URL" --insecure-skip-tls-verify=true
+    - kubectl config set-credentials admin --token="$KUBE_TOKEN"
+    - kubectl config set-context default --cluster=k8s --user=admin
+    - kubectl config use-context default
+    - sed -i "s/{{{version}}}/$CI_COMMIT_SHORT_SHA/" k8s.yml
+    - kubectl apply -f k8s.yml
+  only:
+    - master
