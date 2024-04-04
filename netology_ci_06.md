@@ -13,6 +13,10 @@
 
 ## Основная часть
 
+Файлы:  
+[gitlab-CI](https://github.com/busuek/work/blob/main/playbook/files/gitlab-ci.yml)  
+[Dockerfile](https://github.com/busuek/work/blob/main/playbook/files/Dockerfile)
+
 ### DevOps
 
 В репозитории содержится код проекта на Python. Проект — RESTful API сервис. Ваша задача — автоматизировать сборку образа с выполнением python-скрипта:
